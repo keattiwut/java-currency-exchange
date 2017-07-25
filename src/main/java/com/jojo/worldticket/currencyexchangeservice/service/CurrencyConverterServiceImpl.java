@@ -53,9 +53,9 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
 
     private ExchangeRate getRate(String currency) {
         ExchangeRate rate = exchangeRateRepository
-                .findTopByNameOrderByEffectiveDateDesc("USD/" + currency);
+                .findTopByNameOrderByEffectiveDateDesc(BASE_CURRENCY + "/" + currency);
         if (rate == null) {
-            throw new ExchangeRateNotFoundException("Currency USD/" + currency + "not contain on system");
+            throw new ExchangeRateNotFoundException("Currency " + currency + " not contain on system");
         }
         return rate;
     }

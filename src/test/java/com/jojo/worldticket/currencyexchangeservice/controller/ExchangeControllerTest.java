@@ -39,7 +39,6 @@ public class ExchangeControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(exchangeController).build();
     }
 

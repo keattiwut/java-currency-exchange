@@ -42,7 +42,6 @@ public class RateControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(rateController).build();
     }
 
